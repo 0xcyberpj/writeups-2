@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Tue May  4 02:46:49 2021 as: nmap -p- --min-rate=1000 -vvv -oN ports.nmap 10.10.10.3
+Increasing send delay for 10.10.10.3 from 0 to 5 due to 11 out of 29 dropped probes since last increase.
+Nmap scan report for 10.10.10.3
+Host is up, received echo-reply ttl 63 (1.1s latency).
+Scanned at 2021-05-04 02:46:49 EDT for 138s
+Not shown: 65530 filtered ports
+Reason: 65530 no-responses
+PORT     STATE SERVICE      REASON
+21/tcp   open  ftp          syn-ack ttl 63
+22/tcp   open  ssh          syn-ack ttl 63
+139/tcp  open  netbios-ssn  syn-ack ttl 63
+445/tcp  open  microsoft-ds syn-ack ttl 63
+3632/tcp open  distccd      syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Tue May  4 02:49:07 2021 -- 1 IP address (1 host up) scanned in 137.49 seconds

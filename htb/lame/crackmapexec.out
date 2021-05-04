@@ -1,0 +1,10 @@
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[34m[*][0m Unix (name:LAME) (domain:hackthebox.gr) (signing:False) (SMBv1:True)
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[32m[+][0m hackthebox.gr\: [1m[33m[0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[32m[+][0m Enumerated shares
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33mShare           Permissions     Remark[0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33m-----           -----------     ------[0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33mprint$                          Printer Drivers[0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33mtmp             READ,WRITE      oh noes![0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33mopt                             [0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33mIPC$                            IPC Service (lame server (Samba 3.0.20-Debian))[0m
+[1m[34mSMB[0m         10.10.10.3      445    LAME             [1m[33mADMIN$                          IPC Service (lame server (Samba 3.0.20-Debian))[0m
