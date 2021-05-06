@@ -21,20 +21,28 @@
 
 ## Approach for Active Directory machine in CTF's
 
-![ad-approach](attacking-ad-approach.svg)
+- General Approach for AD machines
+
+<p align="center">
+  <img src="attacking-ad-approach.jpeg" />
+</p>
+
 
 ### Kerberos Authentication
 
-<p align="center">
-  <img src="kerberos-auth.svg" />
-</p>
-
 - Authentication process of kerberos in Active Directory
+
+<p align="center">
+  <img src="kerberos-auth.jpeg" />
+</p>
 
 ### Kerberos Authentication Explained
 
 - Authentication process explained
-![auth](kerberos-auth-explained.svg)
+
+<p align="center">
+  <img src="kerberos-auth-explained.jpeg" />
+</p>
 
 ## Attacking Kerberos Authentication
 
