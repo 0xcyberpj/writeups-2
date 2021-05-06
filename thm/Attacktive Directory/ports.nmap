@@ -1,0 +1,104 @@
+# Nmap 7.91 scan initiated Thu May  6 05:11:57 2021 as: nmap -p- --min-rate=1000 -vv -oN ports.nmap 10.10.209.16
+Increasing send delay for 10.10.209.16 from 0 to 5 due to 2444 out of 8146 dropped probes since last increase.
+Warning: 10.10.209.16 giving up on port because retransmission cap hit (10).
+Increasing send delay for 10.10.209.16 from 640 to 1000 due to 1892 out of 6305 dropped probes since last increase.
+Nmap scan report for 10.10.209.16
+Host is up, received echo-reply ttl 127 (0.72s latency).
+Scanned at 2021-05-06 05:11:58 EDT for 157s
+Not shown: 65444 closed ports
+Reason: 65444 resets
+PORT      STATE    SERVICE          REASON
+53/tcp    open     domain           syn-ack ttl 127
+80/tcp    open     http             syn-ack ttl 127
+88/tcp    open     kerberos-sec     syn-ack ttl 127
+135/tcp   open     msrpc            syn-ack ttl 127
+139/tcp   open     netbios-ssn      syn-ack ttl 127
+389/tcp   open     ldap             syn-ack ttl 127
+445/tcp   open     microsoft-ds     syn-ack ttl 127
+464/tcp   open     kpasswd5         syn-ack ttl 127
+593/tcp   open     http-rpc-epmap   syn-ack ttl 127
+636/tcp   open     ldapssl          syn-ack ttl 127
+643/tcp   filtered sanity           no-response
+3268/tcp  open     globalcatLDAP    syn-ack ttl 127
+3269/tcp  open     globalcatLDAPssl syn-ack ttl 127
+3295/tcp  filtered dyniplookup      no-response
+3389/tcp  open     ms-wbt-server    syn-ack ttl 127
+4208/tcp  filtered vrml-multi-use   no-response
+5148/tcp  filtered unknown          no-response
+5985/tcp  open     wsman            syn-ack ttl 127
+6184/tcp  filtered unknown          no-response
+6485/tcp  filtered sun-sr-iiop      no-response
+6906/tcp  filtered unknown          no-response
+7915/tcp  filtered unknown          no-response
+9389/tcp  open     adws             syn-ack ttl 127
+11711/tcp filtered unknown          no-response
+12689/tcp filtered unknown          no-response
+15432/tcp filtered unknown          no-response
+17095/tcp filtered unknown          no-response
+17670/tcp filtered unknown          no-response
+17854/tcp filtered unknown          no-response
+17884/tcp filtered unknown          no-response
+18322/tcp filtered unknown          no-response
+20097/tcp filtered unknown          no-response
+23875/tcp filtered unknown          no-response
+24206/tcp filtered unknown          no-response
+24554/tcp filtered binkp            no-response
+24634/tcp filtered unknown          no-response
+25502/tcp filtered unknown          no-response
+25836/tcp filtered unknown          no-response
+27864/tcp filtered unknown          no-response
+28583/tcp filtered unknown          no-response
+29227/tcp filtered unknown          no-response
+31755/tcp filtered unknown          no-response
+32007/tcp filtered unknown          no-response
+32867/tcp filtered unknown          no-response
+35059/tcp filtered unknown          no-response
+35064/tcp filtered unknown          no-response
+36444/tcp filtered m3ap             no-response
+38298/tcp filtered unknown          no-response
+38640/tcp filtered unknown          no-response
+38997/tcp filtered unknown          no-response
+41214/tcp filtered unknown          no-response
+41511/tcp filtered unknown          no-response
+41579/tcp filtered unknown          no-response
+41642/tcp filtered unknown          no-response
+42376/tcp filtered unknown          no-response
+42510/tcp filtered caerpc           no-response
+43157/tcp filtered unknown          no-response
+44789/tcp filtered unknown          no-response
+45682/tcp filtered unknown          no-response
+46681/tcp filtered unknown          no-response
+47001/tcp open     winrm            syn-ack ttl 127
+48184/tcp filtered unknown          no-response
+48205/tcp filtered unknown          no-response
+48531/tcp filtered unknown          no-response
+48532/tcp filtered unknown          no-response
+49559/tcp filtered unknown          no-response
+49664/tcp open     unknown          syn-ack ttl 127
+49665/tcp open     unknown          syn-ack ttl 127
+49667/tcp open     unknown          syn-ack ttl 127
+49669/tcp open     unknown          syn-ack ttl 127
+49672/tcp open     unknown          syn-ack ttl 127
+49675/tcp open     unknown          syn-ack ttl 127
+49676/tcp open     unknown          syn-ack ttl 127
+49679/tcp open     unknown          syn-ack ttl 127
+49685/tcp open     unknown          syn-ack ttl 127
+49696/tcp open     unknown          syn-ack ttl 127
+49828/tcp open     unknown          syn-ack ttl 127
+50637/tcp filtered unknown          no-response
+50866/tcp filtered unknown          no-response
+51439/tcp filtered unknown          no-response
+51887/tcp filtered unknown          no-response
+52004/tcp filtered unknown          no-response
+56121/tcp filtered unknown          no-response
+57271/tcp filtered unknown          no-response
+58484/tcp filtered unknown          no-response
+58495/tcp filtered unknown          no-response
+58883/tcp filtered unknown          no-response
+59644/tcp filtered unknown          no-response
+60363/tcp filtered unknown          no-response
+62741/tcp filtered unknown          no-response
+64825/tcp filtered unknown          no-response
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Thu May  6 05:14:35 2021 -- 1 IP address (1 host up) scanned in 157.49 seconds

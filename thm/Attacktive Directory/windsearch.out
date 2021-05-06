@@ -1,0 +1,81 @@
+dn: CN=Ashu BreakerOfThings,OU=Staff,DC=spookysec,DC=local
+cn: Ashu BreakerOfThings
+sAMAccountName: breakerofthings
+userPrincipalName: breakerofthings@spookysec.local
+
+dn: CN=James Ninja,OU=Staff,DC=spookysec,DC=local
+cn: James Ninja
+sAMAccountName: james
+userPrincipalName: james@spookysec.local
+
+dn: CN=Administrator,CN=Users,DC=spookysec,DC=local
+cn: Administrator
+sAMAccountName: Administrator
+
+dn: CN=Guest,CN=Users,DC=spookysec,DC=local
+cn: Guest
+sAMAccountName: Guest
+
+dn: CN=krbtgt,CN=Users,DC=spookysec,DC=local
+cn: krbtgt
+sAMAccountName: krbtgt
+
+dn: CN=Ben Skidy,OU=Staff,DC=spookysec,DC=local
+cn: Ben Skidy
+sAMAccountName: skidy
+userPrincipalName: skidy@spookysec.local
+
+dn: CN=root optional,OU=Staff,DC=spookysec,DC=local
+cn: root optional
+sAMAccountName: optional
+userPrincipalName: optional@spookysec.local
+
+dn: CN=Par Adox,OU=Staff,DC=spookysec,DC=local
+cn: Par Adox
+sAMAccountName: paradox
+userPrincipalName: paradox@spookysec.local
+
+dn: CN=Muirland Oracle,OU=Staff,DC=spookysec,DC=local
+cn: Muirland Oracle
+sAMAccountName: Muirland
+userPrincipalName: Muirland@spookysec.local
+
+dn: CN=Dan SherlockSec,OU=Staff,DC=spookysec,DC=local
+cn: Dan SherlockSec
+sAMAccountName: sherlocksec
+userPrincipalName: sherlocksec@spookysec.local
+
+dn: CN=Jon Darkstar,OU=Staff,DC=spookysec,DC=local
+cn: Jon Darkstar
+sAMAccountName: darkstar
+userPrincipalName: darkstar@spookysec.local
+
+dn: CN=Ori,OU=Staff,DC=spookysec,DC=local
+cn: Ori
+sAMAccountName: Ori
+userPrincipalName: Ori@spookysec.local
+
+dn: CN=Robin,OU=Staff,DC=spookysec,DC=local
+cn: Robin
+sAMAccountName: robin
+userPrincipalName: robin@spookysec.local
+
+dn: CN=horshark,OU=Staff,DC=spookysec,DC=local
+cn: horshark
+sAMAccountName: horshark
+userPrincipalName: horshark@spookysec.local
+
+dn: CN=svc admin,OU=Staff,DC=spookysec,DC=local
+cn: svc admin
+sAMAccountName: svc-admin
+userPrincipalName: svc-admin@spookysec.local
+
+dn: CN=backup,OU=Administrator,DC=spookysec,DC=local
+cn: backup
+sAMAccountName: backup
+userPrincipalName: backup@spookysec.local
+
+dn: CN=Admin Spooks,OU=Administrator,DC=spookysec,DC=local
+cn: Admin Spooks
+sAMAccountName: a-spooks
+userPrincipalName: a-spooks@spookysec.local

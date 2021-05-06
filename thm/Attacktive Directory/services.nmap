@@ -1,0 +1,89 @@
+# Nmap 7.91 scan initiated Thu May  6 05:17:01 2021 as: nmap -p53,80,88,135,139,389,445,464,593,636,3268,3269,3389,5985,9389,47001 -vv -T4 -sC -sV -oN services.nmap 10.10.209.16
+Nmap scan report for 10.10.209.16
+Host is up, received syn-ack (0.27s latency).
+Scanned at 2021-05-06 05:17:01 EDT for 50s
+
+PORT      STATE SERVICE       REASON  VERSION
+53/tcp    open  domain        syn-ack Simple DNS Plus
+80/tcp    open  http          syn-ack Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2021-05-06 09:17:12Z)
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: spookysec.local0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack
+464/tcp   open  kpasswd5?     syn-ack
+593/tcp   open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack
+3268/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: spookysec.local0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: THM-AD
+|   NetBIOS_Domain_Name: THM-AD
+|   NetBIOS_Computer_Name: ATTACKTIVEDIREC
+|   DNS_Domain_Name: spookysec.local
+|   DNS_Computer_Name: AttacktiveDirectory.spookysec.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-05-06T09:17:29+00:00
+| ssl-cert: Subject: commonName=AttacktiveDirectory.spookysec.local
+| Issuer: commonName=AttacktiveDirectory.spookysec.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-05-05T09:07:26
+| Not valid after:  2021-11-04T09:07:26
+| MD5:   0175 7392 a437 9435 c80a 82dc 21af d899
+| SHA-1: 9bf9 1633 aa02 54aa db26 8758 f3c2 519b 055f a7cc
+| -----BEGIN CERTIFICATE-----
+| MIIDCjCCAfKgAwIBAgIQQparP16DXb9GMyKUtZKz7DANBgkqhkiG9w0BAQsFADAu
+| MSwwKgYDVQQDEyNBdHRhY2t0aXZlRGlyZWN0b3J5LnNwb29reXNlYy5sb2NhbDAe
+| Fw0yMTA1MDUwOTA3MjZaFw0yMTExMDQwOTA3MjZaMC4xLDAqBgNVBAMTI0F0dGFj
+| a3RpdmVEaXJlY3Rvcnkuc3Bvb2t5c2VjLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEAzJnYHncbp+4Js8x6FqrMtrM0Cb3SNPKeqqKYsqMHwuwg
+| MXlqY/INY6IMe1CocG6MayeP1gMSjsjqC0jm6kr+vXntx0zeB1fN+Ju8F0zz2HIe
+| VJ3pmwmM/D0gQYiTSpDmNInsZJ27sG9oKa92EjgDEolZhsqvFJWmgTmOb38s9Fdb
+| oADVE0s17BbLbYfIGhzWpJmojYlUNmHuEMGdvHhRk6PIkYL93gfIEFVyoMrVjdGB
+| Q9T2khEfVjOec0l90mmwFVRUSPslGSnYri+ZuAwrTltnmY/xD+BoppLZndIumtEk
+| M7L2//GPy6sf+6cUExK9UkTK6PwEk0WdbbOCImIe4QIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAG2o
+| WDQ9l7cgYgiCqcfc/nQ873tbNTgX6Se2iUsNuMDn2ilwp4cCkspvVU11bhea0Mw+
+| CbR8EZyo9kP6S1zMxHN1fL0G1bUsHPjgIIA8HrAbMwk6fIyXPg6gPRCvdU+5xSD+
+| YGx+hT3WZvl1C7C1VlGvGzOdhWkfByG9VcpHERzF1M0SZQb92oQNhcynMU2q/X7f
+| 92FihE4vm88M62qKpWnUz3iHIf/Rb5mxZX1KS7ShlWFY53JlbBP03qawTGN3hpdR
+| GaZ3gVFaTUnEX2C3U3L4rVtmfWqYfXUf9GSQpJvxKVKV3VWO1OOsPEev+2u0nmFB
+| VwAJOSh0f0bELbFtWGk=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-05-06T09:17:41+00:00; +1s from scanner time.
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack .NET Message Framing
+47001/tcp open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: Host: ATTACKTIVEDIREC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 7262/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 14762/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 64884/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 13837/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-05-06T09:17:34
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May  6 05:17:51 2021 -- 1 IP address (1 host up) scanned in 50.96 seconds
