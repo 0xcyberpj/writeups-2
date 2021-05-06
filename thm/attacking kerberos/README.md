@@ -195,20 +195,28 @@ sudo neo4j console
 
 - Once the json files loaded into the bloodhound, search for the user machine1
 
-![user](bh-user.png)
+<p align="center">
+  <img src="bh-user.png" />
+</p>
 
 - Select the user and mark as owned (since we have the user's password)
 
-![owned](bh-owned.png)
+<p align="center">
+  <img src="bh-owned.png" />
+</p>
 
 - Now in the quiries section, find the kerberoastable account and other requirements 
 - We will find all the kerberoastable accounts
 
-![kerberoastable](bh-kerberoastable.png)
+<p align="center">
+  <img src="bh-kerberoastable.png" />
+</p>
 
 - Also find the kerberoastable users wtith high privs
 
-![high kerb](bh-high-kerb.png)
+<p align="center">
+  <img src="bh-high-kerb.png" />
+</p>
 
 #### Kerberoasting With Rubeus.exe
 
