@@ -1,0 +1,102 @@
+# Nmap 7.91 scan initiated Wed May  5 08:43:45 2021 as: nmap -p 22,53,88,135,139,389,445,464,593,636,3268,3269,3389,5985,9389,47001,49664,49665,49667,49669,49674,49675,49676,49680,49689,49699,49775 -sC -sV -oN services.nmap -vvv 10.10.22.147
+Nmap scan report for 10.10.22.147
+Host is up, received conn-refused (0.22s latency).
+Scanned at 2021-05-05 08:43:46 EDT for 82s
+
+PORT      STATE SERVICE       REASON  VERSION
+22/tcp    open  ssh           syn-ack OpenSSH for_Windows_7.7 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 68:f2:8b:17:15:7c:90:d7:4e:0f:8e:d1:4c:6a:be:98 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBYAa9AZBsEOwCK/28ymk+6ZkIdxdK3dfRnFaUZHlSqUgdz5Fjn/wyUeuAChlOvF6yjcGtcqvx62/Cw8ngaubb9B7QYt8XWGy4aFRL/IYX0O7MiEJQ6YIPGYKQSOs2m/F07FrQPLnzytQ3oh0Gkl6zpOEGtcPYa8BtFj6vpdVthaDipnm4TetegdwUAeRpq1m9chBWONPfU0syMn2TuA8jw+sFIkOCE+x+ylOjHeJ63ncdvrvPeUSkwD//qeOg6JdwaDk3jdtuKxphxkczsc2VvU/OeJ8wW7MMQy2nO1JZTCtrWlms8d2+j1V8pR+fhLIuKu+JpwbLqgr5jieB1CIl
+|   256 b0:3a:a7:c3:88:2e:c1:0b:d7:be:1e:43:1c:f7:5b:34 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCGER+LQSfN21aCiK2J5UoJ7elNly98IB2TIQejTa/vdve8vfzhOcZNkdmCRcwcfqvmMM7eScuhnyuV2l34lDoE=
+|   256 03:c0:ee:58:32:ae:6a:cc:8e:1a:7d:8b:20:c8:a2:bb (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBkJkzX/eHfebkreDRkbu0WtQB1EnQtRuYvx3rooVnqm
+53/tcp    open  domain        syn-ack Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2021-05-05 12:43:53Z)
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: CONTROLLER.local0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack
+464/tcp   open  kpasswd5?     syn-ack
+593/tcp   open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack
+3268/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: CONTROLLER.local0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: CONTROLLER
+|   NetBIOS_Domain_Name: CONTROLLER
+|   NetBIOS_Computer_Name: CONTROLLER-1
+|   DNS_Domain_Name: CONTROLLER.local
+|   DNS_Computer_Name: CONTROLLER-1.CONTROLLER.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-05-05T12:44:53+00:00
+| ssl-cert: Subject: commonName=CONTROLLER-1.CONTROLLER.local
+| Issuer: commonName=CONTROLLER-1.CONTROLLER.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-01-02T15:19:56
+| Not valid after:  2021-07-04T15:19:56
+| MD5:   b8b1 3690 5fb3 d5aa c695 d036 24cf a429
+| SHA-1: fed8 c684 7b4a 3ddd 9c80 0da1 6a86 d304 db08 ad0d
+| -----BEGIN CERTIFICATE-----
+| MIIC/jCCAeagAwIBAgIQZ7TGBkhX2J5KmGx5eyzSczANBgkqhkiG9w0BAQsFADAo
+| MSYwJAYDVQQDEx1DT05UUk9MTEVSLTEuQ09OVFJPTExFUi5sb2NhbDAeFw0yMTAx
+| MDIxNTE5NTZaFw0yMTA3MDQxNTE5NTZaMCgxJjAkBgNVBAMTHUNPTlRST0xMRVIt
+| MS5DT05UUk9MTEVSLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+| AQEAvp7SUJxkGFMB784Vt01vqb/kA26/ThqIM3Dq4A+cWLqHFHUmx0Ag+IV4MbCO
+| eizsoZRBbfiaZt+casTsdFIkV1Q0V0CuBkd4p3HoMDs0+ONIsDrRcnMn4kaeJSJI
+| MlqsTuYLa3wT8SiyPcy6O8aiGFvvpYrTWQLaW4Bvo4XH/IUwaUr7aQeInwoGbduO
+| /hEmFIjYPumUQyUyzZJem+nSu3wN3RhMlMqTCGUz4zpnbLfMSx9X3loULg9ZJh5W
+| LwakBh2nVq9tIY8Po1MhVrPvGKwl1b5iIk+tsAPSVBjHz/obiMZ4X0RqcD6uNyYp
+| NQ5Wzj3WzFsaR2YNCSsGZz4zLQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD
+| ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAE6u98khKD1k010foYDh
+| ANYH2442Dkp2YPA0m/Gm5cGG7lia+EK59YaeuOZAVagDFto37grrpkumcQu83/lM
+| oLrNvxzrgTWKNAi5iVwgbY6pGmDnddwm9SZU2SKEtP8rvdK7wD1Wn8ioJEBW2Qkx
+| yTyddVyro78SfHfE1y/VTtyWenb+Q4gq4fi+attfmXkGJYl9vRGwqgh6y9cHOno3
+| DpF00RtIPd0mpOCaozAkCLE2nxykMFXnnk9Oru0n47Se+VwLzmWuW3rUDtZBkD3l
+| OHS5jWG3qfgT+VQfGxU225t2gY/cjjY8E9+B0Z9ZCg9htQtJf5aS2ewSENGEo7+M
+| R4w=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-05-05T12:45:01+00:00; -1s from scanner time.
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack .NET Message Framing
+47001/tcp open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49674/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49675/tcp open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+49676/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49680/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49689/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49699/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49775/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: Host: CONTROLLER-1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 12096/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 61379/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 16334/udp): CLEAN (Timeout)
+|   Check 4 (port 11488/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-05-05T12:44:52
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May  5 08:45:08 2021 -- 1 IP address (1 host up) scanned in 82.77 seconds

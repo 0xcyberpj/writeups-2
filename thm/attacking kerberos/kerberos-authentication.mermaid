@@ -1,0 +1,15 @@
+sequenceDiagram
+    user->>+DomainController: 1. User Requesting Ticket
+    note left of user: (1)The request for TGT contains <br> timestamp encrypted with user's<br> password
+    DomainController->>-user: 2. Ticket for the user (TGT & Session Key)
+    note right of DomainController: (2) Domain controller has the <br> password for every accounts<br> The DC decrypts the request<br> with users password. <br> The TGT is encrypted with the <br> password of the "krbtgt" account<br> which is only known for the DC
+    user->>+DomainController: 3. Ticket Request for a service (contains TGT in the requests)
+    note left of user: (3)Contains user ticket and data <br> encrypted with session key
+    DomainController->>-user: 4. Service ticket for the requested service
+    note right of DomainController: (4) Service Ticket is sent by the<br> Domain controller with  a new <br> session key<br> This TGS is encrypted with the<br> requesting account's password, "SPN's"<br> kick in
+    user->>+Service Server: 5. Connection with the service the user wants (contains service ticket)
+    note left of user: Contains the obtained Service<br> ticket and data encrypted with <br> new session key
+    Service Server->>-user: 6. Access to the requested service
+    user-->Service Server : Illustrated by cybewr3nch with mermaid
+    note right of Service Server: Ther service server doesnt contact the <br> domain server for checking. It just trusts<br> the ticket passed to it
+    

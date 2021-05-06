@@ -1,0 +1,45 @@
+# Nmap 7.91 scan initiated Wed May  5 07:25:42 2021 as: nmap -p- --min-rate=1000 -oN ports.nmap -vvv 10.10.22.147
+Increasing send delay for 10.10.22.147 from 320 to 640 due to 2792 out of 9306 dropped probes since last increase.
+Increasing send delay for 10.10.22.147 from 640 to 1000 due to 3182 out of 10605 dropped probes since last increase.
+Warning: 10.10.22.147 giving up on port because retransmission cap hit (10).
+Nmap scan report for 10.10.22.147
+Host is up, received echo-reply ttl 127 (0.99s latency).
+Scanned at 2021-05-05 07:25:42 EDT for 123s
+Not shown: 65503 closed ports
+Reason: 65503 resets
+PORT      STATE    SERVICE          REASON
+22/tcp    open     ssh              syn-ack ttl 127
+53/tcp    open     domain           syn-ack ttl 127
+88/tcp    open     kerberos-sec     syn-ack ttl 127
+135/tcp   open     msrpc            syn-ack ttl 127
+139/tcp   open     netbios-ssn      syn-ack ttl 127
+389/tcp   open     ldap             syn-ack ttl 127
+445/tcp   open     microsoft-ds     syn-ack ttl 127
+464/tcp   open     kpasswd5         syn-ack ttl 127
+593/tcp   open     http-rpc-epmap   syn-ack ttl 127
+636/tcp   open     ldapssl          syn-ack ttl 127
+3268/tcp  open     globalcatLDAP    syn-ack ttl 127
+3269/tcp  open     globalcatLDAPssl syn-ack ttl 127
+3389/tcp  open     ms-wbt-server    syn-ack ttl 127
+5985/tcp  open     wsman            syn-ack ttl 127
+6498/tcp  filtered unknown          no-response
+8419/tcp  filtered unknown          no-response
+9389/tcp  open     adws             syn-ack ttl 127
+20032/tcp filtered unknown          no-response
+29267/tcp filtered unknown          no-response
+38919/tcp filtered unknown          no-response
+47001/tcp open     winrm            syn-ack ttl 127
+49664/tcp open     unknown          syn-ack ttl 127
+49665/tcp open     unknown          syn-ack ttl 127
+49667/tcp open     unknown          syn-ack ttl 127
+49669/tcp open     unknown          syn-ack ttl 127
+49674/tcp open     unknown          syn-ack ttl 127
+49675/tcp open     unknown          syn-ack ttl 127
+49676/tcp open     unknown          syn-ack ttl 127
+49680/tcp open     unknown          syn-ack ttl 127
+49689/tcp open     unknown          syn-ack ttl 127
+49699/tcp open     unknown          syn-ack ttl 127
+49775/tcp open     unknown          syn-ack ttl 127
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed May  5 07:27:45 2021 -- 1 IP address (1 host up) scanned in 122.74 seconds

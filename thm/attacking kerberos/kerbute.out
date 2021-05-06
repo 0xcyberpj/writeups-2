@@ -1,0 +1,13 @@
+2021/05/05 14:27:12 >  Using KDC(s):
+2021/05/05 14:27:12 >  	10.10.53.233:88
+2021/05/05 14:27:13 >  [+] VALID USERNAME:	 admin1@controller.local
+2021/05/05 14:27:13 >  [+] VALID USERNAME:	 admin2@controller.local
+2021/05/05 14:27:13 >  [+] VALID USERNAME:	 administrator@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 httpservice@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 machine1@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 machine2@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 sqlservice@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 user1@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 user2@controller.local
+2021/05/05 14:27:15 >  [+] VALID USERNAME:	 user3@controller.local
+2021/05/05 14:27:15 >  Done! Tested 100 usernames (10 valid) in 2.262 seconds
