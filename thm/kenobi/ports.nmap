@@ -1,0 +1,24 @@
+# Nmap 7.91 scan initiated Thu May  6 08:09:49 2021 as: nmap -p- --min-rate=1000 -vv -oN ports.nmap 10.10.160.110
+Warning: 10.10.160.110 giving up on port because retransmission cap hit (10).
+Increasing send delay for 10.10.160.110 from 320 to 640 due to 1050 out of 3498 dropped probes since last increase.
+Increasing send delay for 10.10.160.110 from 640 to 1000 due to 684 out of 2279 dropped probes since last increase.
+Nmap scan report for 10.10.160.110
+Host is up, received echo-reply ttl 63 (0.25s latency).
+Scanned at 2021-05-06 08:09:49 EDT for 128s
+Not shown: 65232 closed ports, 292 filtered ports
+Reason: 65232 resets and 292 no-responses
+PORT      STATE SERVICE      REASON
+21/tcp    open  ftp          syn-ack ttl 63
+22/tcp    open  ssh          syn-ack ttl 63
+80/tcp    open  http         syn-ack ttl 63
+111/tcp   open  rpcbind      syn-ack ttl 63
+139/tcp   open  netbios-ssn  syn-ack ttl 63
+445/tcp   open  microsoft-ds syn-ack ttl 63
+2049/tcp  open  nfs          syn-ack ttl 63
+34023/tcp open  unknown      syn-ack ttl 63
+50323/tcp open  unknown      syn-ack ttl 63
+51297/tcp open  unknown      syn-ack ttl 63
+56499/tcp open  unknown      syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Thu May  6 08:11:57 2021 -- 1 IP address (1 host up) scanned in 127.94 seconds

@@ -3,6 +3,7 @@
 - MachineIP: `10.10.209.16`
 - OS       : `Windows`
 - Exploit  : `AS_REP Roasting, DCSync`
+
 ---
 
 > Know basics of kerberos authentication from [here](https://github.com/cyberwr3nch/writeups/tree/main/thm/attacking%20kerberos) before continuing
