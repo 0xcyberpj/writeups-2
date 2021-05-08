@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 import socket, sys, time
-host = "10.10.163.22"
+host = "127.0.0.1"
 port = 1337
 timeout = 2 
+
 
 def attack():
     prefix = sys.argv[1]

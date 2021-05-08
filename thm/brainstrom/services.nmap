@@ -1,0 +1,8 @@
+# Nmap 7.91 scan initiated Sat May  8 08:04:33 2021 as: nmap -sC -sV -oN writeups/thm/brainstrom/services.nmap -vvv -Pn 10.10.246.108
+Nmap scan report for 10.10.246.108
+Host is up, received user-set.
+All 1000 scanned ports on 10.10.246.108 are filtered because of 1000 no-responses
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May  8 08:07:55 2021 -- 1 IP address (1 host up) scanned in 202.19 seconds

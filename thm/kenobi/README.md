@@ -273,5 +273,4 @@ uid=0(root) gid=1000(kenobi) groups=1000(kenobi),4(adm),24(cdrom),27(sudo),30(di
 `3`
 
 - What is the root flag (/root/root.txt)?
-
 `177b3cd8562289f37382721c28381f02`
