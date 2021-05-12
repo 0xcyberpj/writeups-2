@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon May 10 12:36:39 2021 as: nmap -p139,80,135,445,3389,49663,49669,49668 -sV -sC -T4 -Pn -oA 10.10.158.43 10.10.158.43 -->
+<nmaprun scanner="nmap" args="nmap -p139,80,135,445,3389,49663,49669,49668 -sV -sC -T4 -Pn -oA 10.10.158.43 10.10.158.43" start="1620630399" startstr="Mon May 10 12:36:39 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="8" services="80,135,139,445,3389,49663,49668-49669"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1620630399" endtime="1620630498"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.158.43" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Windows Server 2016 Standard Evaluation 14393 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: RELEVANT&#xa;  NetBIOS_Domain_Name: RELEVANT&#xa;  NetBIOS_Computer_Name: RELEVANT&#xa;  DNS_Domain_Name: Relevant&#xa;  DNS_Computer_Name: Relevant&#xa;  Product_Version: 10.0.14393&#xa;  System_Time: 2021-05-10T07:07:40+00:00"><elem key="Target_Name">RELEVANT</elem>
+<elem key="NetBIOS_Domain_Name">RELEVANT</elem>
+<elem key="NetBIOS_Computer_Name">RELEVANT</elem>
+<elem key="DNS_Domain_Name">Relevant</elem>
+<elem key="DNS_Computer_Name">Relevant</elem>
+<elem key="Product_Version">10.0.14393</elem>
+<elem key="System_Time">2021-05-10T07:07:40+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=Relevant&#xa;Not valid before: 2021-05-09T06:45:09&#xa;Not valid after:  2021-11-08T06:45:09"><table key="subject">
+<elem key="commonName">Relevant</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Relevant</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CE7DB705B048F98543240A036C3C704BB9C05655839457F321F5BB7497C64B1F8686BD22E7429FBCC75B3090DBD99588BD3E248D1279C00B284AD59367E167E8FBD75FBC8A34F4E1C49BE0A79B5D94915F0217492AD14C9F4074CA433901AC117C2C5E452D8F3839A25CF5E8B5CACA20B523FAC66C59B0A277E56A3EFB06CB1CAF5709CBC70BDF5AF22FDE42BD47798AB5AB34B16DFD50CDD45DB76D7893AF1AD76F9928D4EBF42BCF8062CA8B89378EB6ED734B76DACFF183FF3184E83277B6B870A415E31F283F43AB9C3B6AD1B53B72D06E669B4D203F6F7ECE6ED22B174FCDD54DD2C1FAB90EAA29A7123E4CB83E0E77751EC838CD3200353ADB96E31D75</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-05-09T06:45:09</elem>
+<elem key="notAfter">2021-11-08T06:45:09</elem>
+</table>
+<elem key="md5">630f660a7056f13e85f3b18e395c6142</elem>
+<elem key="sha1">a5b1c48aca62bca0d17f07e5f53f7c96b1ae83b2</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQGlKNuz9iaIpCPe/GXNKHYjANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhSZWxldmFudDAeFw0yMTA1MDkwNjQ1MDlaFw0yMTExMDgwNjQ1&#xa;MDlaMBMxETAPBgNVBAMTCFJlbGV2YW50MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAzn23BbBI+YVDJAoDbDxwS7nAVlWDlFfzIfW7dJfGSx+Ghr0i50Kf&#xa;vMdbMJDb2ZWIvT4kjRJ5wAsoStWTZ+Fn6PvXX7yKNPThxJvgp5tdlJFfAhdJKtFM&#xa;n0B0ykM5AawRfCxeRS2PODmiXPXotcrKILUj+sZsWbCid+VqPvsGyxyvVwnLxwvf&#xa;WvIv3kK9R3mKtas0sW39UM3UXbdteJOvGtdvmSjU6/Qrz4BiyouJN4627XNLdtrP&#xa;8YP/MYToMne2uHCkFeMfKD9Dq5w7atG1O3LQbmabTSA/b37ObtIrF0/N1U3Swfq5&#xa;DqoppxI+TLg+Dnd1Hsg4zTIANTrbluMddQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBACx6yJcxXH+e&#xa;hQl8rYk7qfFzScqgbfgMVpiRce+ViN3asPePMx0VNV2bPdRbkNI7ZNErt0sfTG4m&#xa;0tu44igNOSXMtysOCcwooyQUFy+jKsArR1pKJqbK9DN3hfQlRLSkBlVUn89jwUbE&#xa;Acd7bFfHa0Y0ZdM/Ywo86kL/oJROkFeDdqNjfrqYLaj5T/xQL87a0FOw+mWepC/F&#xa;dnm+QGdhJQTSvxdsvhbcGS7v0LDfSIcCaW8ZZbe1/lDZEANze5jUKRgdvcku1KAx&#xa;MxecNj6ats9ZKyQdJZLtVsooTXbirAhoiR6Sd4OkTQx1k9PDvcLrXTWl7oBJlyuQ&#xa;m0Z7gRZSufo=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-05-10T07:08:19+00:00; +1s from scanner time."><elem key="date">2021-05-10T07:08:19+00:00</elem>
+<elem key="delta">1.0</elem>
+</script></port>
+<port protocol="tcp" portid="49663"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 1h24m01s, deviation: 3h07m50s, median: 0s"><elem key="median">0</elem>
+<elem key="mean">5041</elem>
+<elem key="count">5</elem>
+<elem key="stddev">11270</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2016 Standard Evaluation 14393 (Windows Server 2016 Standard Evaluation 6.3)&#xa;  Computer name: Relevant&#xa;  NetBIOS computer name: RELEVANT\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2021-05-10T00:07:40-07:00&#xa;"><elem key="os">Windows Server 2016 Standard Evaluation 14393</elem>
+<elem key="lanmanager">Windows Server 2016 Standard Evaluation 6.3</elem>
+<elem key="server">RELEVANT\x00</elem>
+<elem key="date">2021-05-10T00:07:40-07:00</elem>
+<elem key="fqdn">Relevant</elem>
+<elem key="domain_dns">Relevant</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-05-10T07:07:42&#xa;  start_date: 2021-05-10T06:45:08"><elem key="date">2021-05-10T07:07:42</elem>
+<elem key="start_date">2021-05-10T06:45:08</elem>
+</script></hostscript><times srtt="206903" rttvar="28321" to="320187"/>
+</host>
+<runstats><finished time="1620630498" timestr="Mon May 10 12:38:18 2021" summary="Nmap done at Mon May 10 12:38:18 2021; 1 IP address (1 host up) scanned in 99.10 seconds" elapsed="99.10" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

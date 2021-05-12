@@ -1,0 +1,12 @@
+┌─[kali@kali]─[~/writeups]
+└──╼ $crackmapexec smb 10.10.50.104 -u 'anonymous' -p 'anonymous' --shares
+SMB         10.10.50.104    445    POLOSMB          [*] Windows 6.1 (name:POLOSMB) (domain:) (signing:False) (SMBv1:True)
+SMB         10.10.50.104    445    POLOSMB          [+] \anonymous:anonymous 
+SMB         10.10.50.104    445    POLOSMB          [+] Enumerated shares
+SMB         10.10.50.104    445    POLOSMB          Share           Permissions     Remark
+SMB         10.10.50.104    445    POLOSMB          -----           -----------     ------
+SMB         10.10.50.104    445    POLOSMB          netlogon                        Network Logon Service
+SMB         10.10.50.104    445    POLOSMB          profiles        READ            Users profiles
+SMB         10.10.50.104    445    POLOSMB          print$                          Printer Drivers
+SMB         10.10.50.104    445    POLOSMB          IPC$                            IPC Service (polosmb server (Samba, Ubuntu))
+

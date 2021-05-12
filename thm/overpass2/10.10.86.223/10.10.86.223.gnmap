@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Mon May 10 14:19:21 2021 as: nmap -p22,2222 -sV -sC -T4 -Pn -oA 10.10.86.223 10.10.86.223
+Host: 10.10.86.223 ()	Status: Up
+Host: 10.10.86.223 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)/, 2222/open/tcp//ssh//OpenSSH 8.2p1 Debian 4 (protocol 2.0)/
+# Nmap done at Mon May 10 14:19:57 2021 -- 1 IP address (1 host up) scanned in 36.10 seconds

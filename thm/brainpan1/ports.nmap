@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Sat May  8 21:42:51 2021 as: nmap -p- --min-rate=1000 -oN ports.nmap -vvv -Pn 10.10.27.237

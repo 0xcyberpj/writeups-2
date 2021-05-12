@@ -1,0 +1,19 @@
+# Nmap 7.91 scan initiated Mon May 10 11:02:26 2021 as: nmap -p- --min-rate=1000 -oN ports.nmap --open -vv 10.10.59.73
+Nmap scan report for 10.10.59.73
+Host is up, received syn-ack (0.22s latency).
+Scanned at 2021-05-10 11:02:26 IST for 131s
+Not shown: 65527 filtered ports
+Reason: 65527 no-responses
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE       REASON
+80/tcp    open  http          syn-ack
+135/tcp   open  msrpc         syn-ack
+139/tcp   open  netbios-ssn   syn-ack
+445/tcp   open  microsoft-ds  syn-ack
+3389/tcp  open  ms-wbt-server syn-ack
+49663/tcp open  unknown       syn-ack
+49667/tcp open  unknown       syn-ack
+49669/tcp open  unknown       syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon May 10 11:04:37 2021 -- 1 IP address (1 host up) scanned in 131.97 seconds
