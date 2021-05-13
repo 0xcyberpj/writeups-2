@@ -1,0 +1,4 @@
+┌─[✗]─[kali@kali]─[~/writeups/thm/networkservices]
+└──╼ $rustscan -a 10.10.105.176 --ulimit 5000 --batch-size 2000 -g 
+10.10.105.176 -> [22,139,445]
+
