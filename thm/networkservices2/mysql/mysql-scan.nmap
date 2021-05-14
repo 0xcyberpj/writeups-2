@@ -1,0 +1,19 @@
+# Nmap 7.91 scan initiated Fri May 14 15:27:38 2021 as: nmap --script mysql-info -oN mysql-scan.nmap -Pn -vv -p3306 10.10.129.24
+Nmap scan report for 10.10.129.24
+Host is up, received user-set (0.22s latency).
+Scanned at 2021-05-14 15:27:49 IST for 1s
+
+PORT     STATE SERVICE REASON
+3306/tcp open  mysql   syn-ack
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.29-0ubuntu0.18.04.1
+|   Thread ID: 11463
+|   Capabilities flags: 65535
+|   Some Capabilities: ConnectWithDatabase, LongPassword, Support41Auth, DontAllowDatabaseTableColumn, IgnoreSigpipes, SupportsTransactions, SwitchToSSLAfterHandshake, InteractiveClient, Speaks41ProtocolNew, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, ODBCClient, SupportsCompression, Speaks41ProtocolOld, SupportsMultipleResults, SupportsMultipleStatments, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: \x148fh\x1A\x10+6=ujo\x0BzgpiC0Z
+|_  Auth Plugin Name: mysql_native_password
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri May 14 15:27:50 2021 -- 1 IP address (1 host up) scanned in 12.17 seconds

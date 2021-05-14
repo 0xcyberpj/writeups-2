@@ -1,0 +1,44 @@
+┌─[kali@kali]─[~/writeups/thm/networkservices2/smtp]
+└──╼ $rustscan -a 10.10.225.86
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Nmap? More like slowmap.🐢
+
+[~] The config file is expected to be at "/home/kali/.rustscan.toml"
+[!] File limit is lower than default batch size. Consider upping with --ulimit. May cause harm to sensitive servers
+[!] Your file limit is very small, which negatively impacts RustScan's speed. Use the Docker image, or up the Ulimit with '--ulimit 5000'.
+Open 10.10.225.86:22
+Open 10.10.225.86:25
+[~] Starting Script(s)
+[>] Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[~] Starting Nmap 7.91 ( https://nmap.org ) at 2021-05-14 13:35 IST
+Initiating Ping Scan at 13:35
+Scanning 10.10.225.86 [2 ports]
+Completed Ping Scan at 13:35, 0.22s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 13:35
+Completed Parallel DNS resolution of 1 host. at 13:35, 11.06s elapsed
+DNS resolution of 1 IPs took 11.06s. Mode: Async [#: 3, OK: 0, NX: 1, DR: 0, SF: 0, TR: 5, CN: 0]
+Initiating Connect Scan at 13:35
+Scanning 10.10.225.86 [2 ports]
+Discovered open port 25/tcp on 10.10.225.86
+Discovered open port 22/tcp on 10.10.225.86
+Completed Connect Scan at 13:35, 0.30s elapsed (2 total ports)
+Nmap scan report for 10.10.225.86
+Host is up, received conn-refused (0.24s latency).
+Scanned at 2021-05-14 13:35:09 IST for 12s
+
+PORT   STATE SERVICE REASON
+22/tcp open  ssh     syn-ack
+25/tcp open  smtp    syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 11.62 seconds
+

