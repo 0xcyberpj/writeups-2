@@ -1,0 +1,83 @@
+# Nmap 7.91 scan initiated Sun May 16 10:59:27 2021 as: nmap -sC -sV -oN np-services.nmap -vvv 10.10.102.71
+Increasing send delay for 10.10.102.71 from 0 to 5 due to 65 out of 216 dropped probes since last increase.
+Nmap scan report for 10.10.102.71
+Host is up, received conn-refused (0.41s latency).
+Scanned at 2021-05-16 10:59:27 IST for 112s
+Not shown: 987 closed ports
+Reason: 987 conn-refused
+PORT     STATE SERVICE       REASON  VERSION
+53/tcp   open  domain        syn-ack Simple DNS Plus
+80/tcp   open  http          syn-ack Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Site doesn't have a title (text/html).
+88/tcp   open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2021-05-16 05:30:31Z)
+135/tcp  open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: hololive.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds? syn-ack
+464/tcp  open  kpasswd5?     syn-ack
+593/tcp  open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped    syn-ack
+3268/tcp open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: hololive.local0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped    syn-ack
+3389/tcp open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: HOLOLIVE
+|   NetBIOS_Domain_Name: HOLOLIVE
+|   NetBIOS_Computer_Name: DC01
+|   DNS_Domain_Name: hololive.local
+|   DNS_Computer_Name: DC01.hololive.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-05-16T05:30:58+00:00
+| ssl-cert: Subject: commonName=DC01.hololive.local
+| Issuer: commonName=DC01.hololive.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-05-15T04:00:59
+| Not valid after:  2021-11-14T04:00:59
+| MD5:   f83d 7c30 25eb f9f3 386f c9c5 9cb9 d206
+| SHA-1: 9d45 f228 61b1 3cd2 48b6 4ed4 7dca dd96 e819 df9b
+| -----BEGIN CERTIFICATE-----
+| MIIC6jCCAdKgAwIBAgIQE1AWd1dr3rBGvcdhSoEJ9jANBgkqhkiG9w0BAQsFADAe
+| MRwwGgYDVQQDExNEQzAxLmhvbG9saXZlLmxvY2FsMB4XDTIxMDUxNTA0MDA1OVoX
+| DTIxMTExNDA0MDA1OVowHjEcMBoGA1UEAxMTREMwMS5ob2xvbGl2ZS5sb2NhbDCC
+| ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALONIPgpkLIoUW22+/EWEw6G
+| WrQ4OW8mcfDfpMfhHVOmMBpvBBwatMAxNE2ObN0c/GreDYPDkx8WS41GefihsBCK
+| QWYWqGnFV8aQ2wxn+Jif88Jg7rv4D6hhiz7FQFm0eGYmIivWgOYYlGu7uok0PiTk
+| WqpWuO0w82Lz7hQQmenuifWkCnDHXzqPjXLNz7gaYKcvb2sxtJo6ll7o/Z1RnMgs
+| Pkl+EMUX+1t2c8JSpCiqdFbszUvYu65JybVISa7BbL1AAB4erfeAeadLz24fxlmm
+| a2BS6pAx7kJBiKQxj7vD+rTWBx4zTazyw/AwroiGbwGeyfoBa63aqxl49t8w1i0C
+| AwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqG
+| SIb3DQEBCwUAA4IBAQBGLNhO/G2Sy5HmnyNhwG4DVoSfqYGWUYeIDi2W+E2Oibrq
+| 8dQAtmcdqM/ti1m4rXrhKH/iO4Q20er4V+F5eE6LAvgR2bmS8EaC98tv2ctCOnAx
+| jH7WOrEMLKgPHS8WNuRl2rZJoiekEooWlRXS4u025x4wr8uRXEpAI6lOtY9Ue5NG
+| gJcNuJz1w84R5k9WKaXVBGr7LgBIpaPxMd2IcJ6wwdT9pfSa76+JiwS24X17Uhxa
+| qL7YeL+H+ovd2a5/bxZ2wBmkv2GE6UGKi0oEfnYRbjxvmI9RR4IKsdmCSJWRZfNY
+| D4O8qFQ/g6wDyLLPc2CY+VuxDoNjvK65p1XSQf+W
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-05-16T05:31:08+00:00; +2s from scanner time.
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1s, deviation: 0s, median: 1s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 12890/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 65045/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 45658/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 36019/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-05-16T05:30:58
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May 16 11:01:19 2021 -- 1 IP address (1 host up) scanned in 112.75 seconds
