@@ -85,6 +85,9 @@ volatility -f 'memory dump' --profiles="{analyzed value}" dlllist -p "{process i
 
 ## I hope you packed your bags
 
+- If a file is packed, the entropy will be high
+- Advantage of packing, obfusticates the code thus bypassing Antiviruses
+
 -  What is the highest file entropy a file can have?
 `8`
 
@@ -93,3 +96,13 @@ volatility -f 'memory dump' --profiles="{analyzed value}" dlllist -p "{process i
 
 - Name a common packer that can be used for applications?
 `UPX`
+
+
+#### External Links
+
+- More about [entropy](https://fsec404.github.io/blog/Shanon-entropy/)
+- Investigating malware using memory forensics [Blackhat Conference 2019](https://www.youtube.com/watch?v=BMFCdAGxVN4)
+- Avira Malware Threat [Report](https://www.avira.com/en/blog/malware-threat-report-q2-2020-statistics-and-trends)
+- Malware detection in pdfs and docs a [survey](https://api.semanticscholar.org/CorpusID:212680542%20(P.%20Singh,%20S.%20Tapaswi,%20S.Gupta))
+- REMnux Cheatsheet [here](https://docs.remnux.org/)
+- Volatility Cheatsheet [here](https://downloads.volatilityfoundation.org/releases/2.4/CheatSheet_v2.4.pdf)
