@@ -1,0 +1,21 @@
+graph TD
+    a[Windows Core Processes]
+    a --> b(system)
+    b --> c(smss.exe 'session manager')
+    c --> d{Process} 
+    d -->|Session id 0| e(csrss.exe & wininit.exe 'in kernal mode')
+    d -->|Session id 1| f(csrss.exe & winlogin.exe 'in usermode')
+    g(csrss.exe) --> infog(starts in user and kernal mode, if terminated results in system crash)
+    h(wininit.exe) --> i{starts}
+    i --> j(services.exe)
+    i --> k(lsass.exe)
+    j --> infoj(responsible to start and interact with services)
+    infoj --> j1(interacts with services with svchost.exe)
+    j1 -->|svchost.exe| infoj1(starts every process as dll svchost interacts with -k tag)
+    k --> infok(responsible for enforcing security)
+    l(winlogon) --> infol(responsible for user login /logoff / lock in ad networks)
+    l --> m(launches userinit.exe)
+    n(userinit.exe) --> infon(HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell and exists)
+    infon --> infon1(contains the explorer.exe as the value)
+    infon --> o(explorer.exe)
+    o --> infoo(gives the user access to their folders and files and gives access to the running process)
